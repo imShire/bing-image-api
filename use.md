@@ -54,7 +54,7 @@
 ## 请求示例
 ### 默认方式请求（当天）
 
-> https://bing.ltya.top/api
+> https://bing.ixu.me/api
 
 返回值：如下图
 ![默认方式请求（当天）](https://bing.ixu.me/api)
