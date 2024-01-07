@@ -9,6 +9,9 @@
 [随机显示必应每日一图，API代码及调用方法](https://www.talklee.com/blog/501.html)
 
 ## 更新日志
+### 2024-01-07
+
+API兼容PHP 8，更新VercelPHP版本
 
 ### Jul 7, 2023
 
