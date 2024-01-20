@@ -38,9 +38,9 @@ $json_string = file_get_contents('https://www.bing.com/HPImageArchive.aspx?forma
 $data = json_decode($json_string);
 
 // $imgurlbase = "https://cn.bing.com".$data->{"images"}[0]->{"urlbase"};
-$imgurlbase = "https://www.bing.com".$data->{"images"}[0]->{"url"};
+// $imgurl = $imgurlbase."_".$imgsize.".".$getformat."";
 
-$imgurl = $imgurlbase."_".$imgsize.".".$getformat."";
+$imgurl = "https://www.bing.com".$data->{"images"}[0]->{"url"};
 
 $imgtime = $data->{"images"}[0]->{"startdate"};
 $imgtitle = $data->{"images"}[0]->{"copyright"};
