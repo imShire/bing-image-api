@@ -23,7 +23,7 @@ $opts = array(
 
 $context = stream_context_create($opts);
 
-$json_string = file_get_contents('https://cn.bing.com/HPImageArchive.aspx?format=js&idx='.$gettime.'&n=1&uhd=1&uhdwidth='.$uhdwidth.'&uhdheight='.$uhdheight.'&mkt=zh-CN', false, $context);
+$json_string = file_get_contents('https://www.bing.com/HPImageArchive.aspx?format=js&idx='.$gettime.'&n=1&uhd=1&uhdwidth='.$uhdwidth.'&uhdheight='.$uhdheight.'&mkt=zh-CN', false, $context);
 $data = json_decode($json_string);
 
 $imgurl = "https://www.bing.com".$data->{"images"}[0]->{"url"};
