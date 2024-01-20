@@ -54,6 +54,10 @@ $info = $_GET['info'] ?? 'false';
 if ($info === 'true') {
   echo "{title:".$imgtitle.",url:".$imgurl.",link:".$imglink.",time:".$imgtime."}";
 }else{
-  header("Location: $imgurl");
+  // header("Location: $imgurl");
+  
+  $imgData = file_get_contents($imgurl);
+  header('Content-type: image/jpeg');
+  echo $imgData;
 }
 ?>
