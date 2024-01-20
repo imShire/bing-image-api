@@ -66,10 +66,12 @@
 返回值：
 ```
 {
-  title:Cocoa pods from Ambanja, Madagascar (© pierivb/Getty Images),
-  url:https://cn.bing.com/th?id=OHR.CocoaPods_ROW3351678192_1920x1080.webp,
-  link:https://www.bing.com/search?q=Cocoa+bean&form=hpcapt,
-  time:20230707
+  "url":"https://www.bing.com/th?id=OHR.MacaroniPenguins_ZH-CN0600867997_UHD.jpg&rf=LaDigue_UHD.jpg&pid=hp&w=3840&h=2160&rs=1&c=4",
+  "date":"20240119",
+  "title":"冰雪极地的马可罗尼企鹅",
+  "copyright":"马可罗尼企鹅，德雷克海峡，智利 (© Paul Souders/Getty Images)",
+  "keyword":"PaulSoudersGettyImages",
+  "filename":"bing_20240119_PaulSoudersGettyImages.jpg"
 }
 ```
 
