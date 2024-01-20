@@ -34,7 +34,7 @@ if (!in_array($imgsize, $allowed_sizes)) {
 
 list($uhdwidth, $uhdheight) = explode('x', $imgsize);
 
-$json_string = file_get_contents('https://www.bing.com/HPImageArchive.aspx?format=js&idx='.$gettime.'&n=1&uhd=1&uhdwidth='.$uhdwidth.'&uhdheight='.$uhdheight);
+$json_string = file_get_contents('https://cn.bing.com/HPImageArchive.aspx?format=js&idx='.$gettime.'&n=1&uhd=1&uhdwidth='.$uhdwidth.'&uhdheight='.$uhdheight);
 $data = json_decode($json_string);
 
 $imgurlbase = "https://cn.bing.com".$data->{"images"}[0]->{"urlbase"};
