@@ -14,7 +14,16 @@ if (!in_array($imgsize, $allowed_sizes)) {
 
 list($uhdwidth, $uhdheight) = explode('x', $imgsize);
 
-$json_string = file_get_contents('https://www.bing.com/HPImageArchive.aspx?format=js&idx='.$gettime.'&n=1&uhd=1&uhdwidth='.$uhdwidth.'&uhdheight='.$uhdheight);
+$opts = array(
+  'http' => array(
+    'method' => "GET",
+    'header' => "Cookie: _EDGE_S=mkt=zh-CN\r\n"
+  )
+);
+
+$context = stream_context_create($opts);
+
+$json_string = file_get_contents('https://cn.bing.com/HPImageArchive.aspx?format=js&idx='.$gettime.'&n=1&uhd=1&uhdwidth='.$uhdwidth.'&uhdheight='.$uhdheight, false, $context);
 $data = json_decode($json_string);
 
 $imgurl = "https://www.bing.com".$data->{"images"}[0]->{"url"};
