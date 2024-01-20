@@ -42,9 +42,10 @@ $data = json_decode($json_string);
 // $imgurlbase = "https://cn.bing.com".$data->{"images"}[0]->{"urlbase"};
 // $imgurl = $imgurlbase."_".$imgsize.".".$getformat."";
 
+// https://www.bing.com/th?id=OHR.PlitviceWinter_EN-US1870468945_UHD.jpg&rf=LaDigue_UHD.jpg&pid=hp&w=3840&h=2160&rs=1&c=4
 $imgurl = "https://www.bing.com".$data->{"images"}[0]->{"url"};
 
-echo $imgurl;
+// echo $imgurl;
 $imgtime = $data->{"images"}[0]->{"startdate"};
 $imgtitle = $data->{"images"}[0]->{"copyright"};
 $imglink = $data->{"images"}[0]->{"copyrightlink"};
