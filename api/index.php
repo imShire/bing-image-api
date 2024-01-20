@@ -36,7 +36,7 @@ list($uhdwidth, $uhdheight) = explode('x', $imgsize);
 
 $json_string = file_get_contents('https://cn.bing.com/HPImageArchive.aspx?format=js&idx='.$gettime.'&n=1&uhd=1&uhdwidth='.$uhdwidth.'&uhdheight='.$uhdheight);
 $data = json_decode($json_string);
-echo $data;
+echo $json_string;
 
 $imgurlbase = "https://cn.bing.com".$data->{"images"}[0]->{"urlbase"};
 // https://www.bing.com/th?id=OHR.ParisBridge_EN-US1771484789_1920x1080.jpg
