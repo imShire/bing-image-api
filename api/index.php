@@ -48,7 +48,7 @@ if ($info === 'true') {
     "keyword" => $keyword,
     "filename" => $filename
   );
-  echo json_encode($output, JSON_UNESCAPED_UNICODE);
+  echo json_encode($output, JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES);
 } else {
   header("Location: $imgurl");
 }
