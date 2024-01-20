@@ -38,11 +38,11 @@ $json_string = file_get_contents('https://cn.bing.com/HPImageArchive.aspx?format
 $data = json_decode($json_string);
 // echo $json_string;
 
-$imgurlbase = "https://cn.bing.com".$data->{"images"}[0]->{"urlbase"};
 // https://www.bing.com/th?id=OHR.ParisBridge_EN-US1771484789_1920x1080.jpg
-$imgurl = $imgurlbase."_".$imgsize.".".$getformat."";
+// $imgurlbase = "https://cn.bing.com".$data->{"images"}[0]->{"urlbase"};
+// $imgurl = $imgurlbase."_".$imgsize.".".$getformat."";
 
-// $imgurl = "https://www.bing.com".$data->{"images"}[0]->{"url"};
+$imgurl = "https://www.bing.com".$data->{"images"}[0]->{"url"};
 
 echo $imgurl;
 $imgtime = $data->{"images"}[0]->{"startdate"};
