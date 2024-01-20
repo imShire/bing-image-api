@@ -39,11 +39,11 @@ $data = json_decode($json_string);
 // echo $json_string;
 
 // https://www.bing.com/th?id=OHR.ParisBridge_EN-US1771484789_1920x1080.jpg
-// $imgurlbase = "https://cn.bing.com".$data->{"images"}[0]->{"urlbase"};
-// $imgurl = $imgurlbase."_".$imgsize.".".$getformat."";
+$imgurlbase = "https://cn.bing.com".$data->{"images"}[0]->{"urlbase"};
+$imgurl = $imgurlbase."_".$imgsize.".".$getformat."";
 
 // https://www.bing.com/th?id=OHR.PlitviceWinter_EN-US1870468945_UHD.jpg&rf=LaDigue_UHD.jpg&pid=hp&w=3840&h=2160&rs=1&c=4
-$imgurl = "https://www.bing.com".$data->{"images"}[0]->{"url"};
+// $imgurl = "https://www.bing.com".$data->{"images"}[0]->{"url"};
 
 // echo $imgurl;
 $imgtime = $data->{"images"}[0]->{"startdate"};
