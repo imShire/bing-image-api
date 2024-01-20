@@ -29,10 +29,11 @@ $data = json_decode($json_string);
 $imgurl = "https://www.bing.com".$data->{"images"}[0]->{"url"};
 
 $imgtime = $data->{"images"}[0]->{"startdate"};
-$imgtitle = $data->{"images"}[0]->{"copyright"};
+$imgtitle = $data->{"images"}[0]->{"title"};
+$imgcopyright = $data->{"images"}[0]->{"copyright"};
 $imglink = $data->{"images"}[0]->{"copyrightlink"};
 
-$keyword = explode(", ", $imgtitle)[0];
+$keyword = explode(", ", $imgcopyright)[0];
 $keyword = preg_replace('/[^A-Za-z0-9\-]/', '', $keyword);
 
 $filename = "bing_".$imgtime."_".$keyword.".jpg";
@@ -40,12 +41,12 @@ $filename = "bing_".$imgtime."_".$keyword.".jpg";
 $info = $_GET['info'] ?? 'false';
 if ($info === 'true') {
   $output = array(
-    "Link" => $imgurl,
-    "Date" => $imgtime,
-    "Title" => $imgtitle,
-    "Copyright" => $imglink,
-    "Keyword" => $keyword,
-    "Filename" => $filename
+    "url" => $imgurl,
+    "date" => $imgtime,
+    "title" => $imgtitle,
+    "copyright" => $imgcopyright,
+    "keyword" => $keyword,
+    "filename" => $filename
   );
   echo json_encode($output, JSON_UNESCAPED_UNICODE);
 } else {
