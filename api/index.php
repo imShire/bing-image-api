@@ -36,8 +36,10 @@ list($uhdwidth, $uhdheight) = explode('x', $imgsize);
 
 $json_string = file_get_contents('https://cn.bing.com/HPImageArchive.aspx?format=js&idx='.$gettime.'&n=1&uhd=1&uhdwidth='.$uhdwidth.'&uhdheight='.$uhdheight);
 $data = json_decode($json_string);
+echo $data;
 
 $imgurlbase = "https://cn.bing.com".$data->{"images"}[0]->{"urlbase"};
+// https://www.bing.com/th?id=OHR.ParisBridge_EN-US1771484789_1920x1080.jpg
 $imgurl = $imgurlbase."_".$imgsize.".".$getformat."";
 
 // $imgurl = "https://www.bing.com".$data->{"images"}[0]->{"url"};
@@ -50,12 +52,6 @@ $info = $_GET['info'] ?? 'false';
 if ($info === 'true') {
   echo "{title:".$imgtitle.",url:".$imgurl.",link:".$imglink.",time:".$imgtime."}";
 }else{
-//   $imgData = file_get_contents($imgurl);
-//   header('Content-type: image/jpeg');
-//   echo $imgData;
-// }
-// ?>
-
   header("Location: $imgurl");
 }
 ?>
